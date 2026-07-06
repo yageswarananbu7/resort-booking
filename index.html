@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience unparalleled luxury at J.K.L Resort. Book exquisite rooms, enjoy gourmet global dining, and relax in our swimming pool, gym, spa, and play areas.">
+    <title>J.K.L Resort | Luxury Hotel & Spa Booking</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">J.K.L</span> RESORT
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#rooms" class="nav-link">Rooms</a>
+                <a href="#amenities" class="nav-link">Amenities</a>
+                <a href="#dining" class="nav-link">Dining</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fa-solid fa-sun icon-sun"></i>
+                    <i class="fa-solid fa-moon icon-moon"></i>
+                </button>
+                <a href="#rooms" class="btn btn-primary btn-nav">Book Now</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <button class="close-drawer" id="closeDrawer"><i class="fa-solid fa-xmark"></i></button>
+        <nav class="mobile-nav-links">
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#rooms" class="mobile-nav-link">Rooms</a>
+            <a href="#amenities" class="mobile-nav-link">Amenities</a>
+            <a href="#dining" class="mobile-nav-link">Dining</a>
+            <a href="#rooms" class="btn btn-primary mobile-book-btn">Book Now</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-tagline">A Sanctuary of Tranquility & Luxury</span>
+            <h1 class="hero-title">Experience the Art of Escape</h1>
+            <p class="hero-subtitle">Nestled between pristine nature and breathtaking shores, J.K.L Resort offers an unmatched retreat for the soul.</p>
+            <div class="hero-cta-group">
+                <a href="#rooms" class="btn btn-primary btn-lg">Explore Suites</a>
+                <a href="#dining" class="btn btn-secondary btn-lg">Gourmet Dining</a>
+            </div>
+        </div>
+        
+        <!-- Quick Search Bar -->
+        <div class="container quick-search-container">
+            <form class="quick-search" id="quickSearchForm">
+                <div class="search-field">
+                    <label for="searchCheckIn"><i class="fa-regular fa-calendar-days text-gold"></i> Check In</label>
+                    <input type="date" id="searchCheckIn" required>
+                </div>
+                <div class="search-field">
+                    <label for="searchCheckOut"><i class="fa-regular fa-calendar-days text-gold"></i> Check Out</label>
+                    <input type="date" id="searchCheckOut" required>
+                </div>
+                <div class="search-field">
+                    <label for="searchRoomType"><i class="fa-solid fa-bed text-gold"></i> Room Type</label>
+                    <select id="searchRoomType">
+                        <option value="single">Single Room</option>
+                        <option value="double">Double Room</option>
+                        <option value="deluxe">Deluxe Room</option>
+                        <option value="vip">VIP Room</option>
+                        <option value="garden">Garden View Room</option>
+                        <option value="sea">Sea Shore View Room</option>
+                        <option value="nature">Nature View Room</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary search-submit">Check Availability</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container grid grid-2">
+            <div class="about-text-wrapper">
+                <span class="section-tag">Welcome to Paradise</span>
+                <h2 class="section-title">The Heritage of J.K.L Resort</h2>
+                <p class="section-desc">Overlooking serene waters and lush landscapes, J.K.L Resort has redefined luxury hospitality. Our retreat blends sophisticated contemporary design with organic structural textures to offer you an unforgettable sanctuary.</p>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-utensils"></i></div>
+                        <div>
+                            <h4>Complimentary Fine Dining</h4>
+                            <p>Indulge in our exquisite global breakfast, lunch, and dinner menus.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-spa"></i></div>
+                        <div>
+                            <h4>World-Class Amenities</h4>
+                            <p>Free access to our infinity pool, high-tech gym, playground, and premium spa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-wrapper">
+                <div class="about-img-card card-large">
+                    <img src="garden view room.jpg" alt="Beautiful Garden View at J.K.L Resort">
+                    <div class="floating-badge">
+                        <span class="badge-num">5 ★</span>
+                        <span class="badge-text">Luxury Resort</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section class="rooms-section" id="rooms">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Accommodations</span>
+                <h2 class="section-title">Unwind in Exquisite Comfort</h2>
+                <p class="section-desc">Choose from our curated selection of suites and rooms. Toggle between room views and bathrooms to inspect every detail of your future stay.</p>
+            </div>
+
+            <!-- Rooms Grid -->
+            <div class="grid grid-3 room-grid">
+                
+                <!-- Single Room -->
+                <div class="room-card" data-room-id="single">
+                    <div class="room-media-container">
+                        <img src="single room.webp" class="room-image active" alt="Single Room">
+                        <img src="single bathroom.jpg" class="room-image-alt" alt="Single Room Bathroom">
+                        <div class="toggle-media-btn" onclick="toggleRoomImage(this)">
+                            <i class="fa-solid fa-bath"></i> View Bathroom
+                        </div>
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>Single Room</h3>
+                            <span class="room-price">$150<small>/night</small></span>
+                        </div>
+                        <p class="room-desc">Ideal for solo travelers seeking a elegant retreat with functional simplicity and private ensuite bathroom.</p>
+                        <div class="room-amenities-icons">
+                            <span><i class="fa-solid fa-user-large"></i> 1 Guest</span>
+                            <span><i class="fa-solid fa-ruler-combined"></i> 30 m²</span>
+                            <span><i class="fa-solid fa-wifi"></i> Free WiFi</span>
+                        </div>
+                        <button class="btn btn-secondary w-full" onclick="openBookingModal('single')">Book Suite</button>
+                    </div>
+                </div>
+
+                <!-- Double Room -->
+                <div class="room-card" data-room-id="double">
+                    <div class="room-media-container">
+                        <img src="double room.jpg" class="room-image active" alt="Double Room">
+                        <img src="double room bathroom.jpg" class="room-image-alt" alt="Double Room Bathroom">
+                        <div class="toggle-media-btn" onclick="toggleRoomImage(this)">
+                            <i class="fa-solid fa-bath"></i> View Bathroom
+                        </div>
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>Double Room</h3>
+                            <span class="room-price">$250<small>/night</small></span>
+                        </div>
+                        <p class="room-desc">Perfect for couples, offering spacious lounge areas, stylish furnishing, and a premium modern bathroom.</p>
+                        <div class="room-amenities-icons">
+                            <span><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+                            <span><i class="fa-solid fa-ruler-combined"></i> 45 m²</span>
+                            <span><i class="fa-solid fa-martini-glass-citrus"></i> Minibar</span>
+                        </div>
+                        <button class="btn btn-secondary w-full" onclick="openBookingModal('double')">Book Suite</button>
+                    </div>
+                </div>
+
+                <!-- Deluxe Room -->
+                <div class="room-card" data-room-id="deluxe">
+                    <div class="room-media-container">
+                        <img src="deluxe room.png" class="room-image active" alt="Deluxe Room">
+                        <img src="deluxe room bathroom.jpg" class="room-image-alt" alt="Deluxe Room Bathroom">
+                        <div class="toggle-media-btn" onclick="toggleRoomImage(this)">
+                            <i class="fa-solid fa-bath"></i> View Bathroom
+                        </div>
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>Deluxe Room</h3>
+                            <span class="room-price">$400<small>/night</small></span>
+                        </div>
+                        <p class="room-desc">Elevate your comfort in our Deluxe Room, equipped with dynamic lounge corners and deluxe bath features.</p>
+                        <div class="room-amenities-icons">
+                            <span><i class="fa-solid fa-user-group"></i> 3 Guests</span>
+                            <span><i class="fa-solid fa-ruler-combined"></i> 60 m²</span>
+                            <span><i class="fa-solid fa-tv"></i> Smart TV</span>
+                        </div>
+                        <button class="btn btn-secondary w-full" onclick="openBookingModal('deluxe')">Book Suite</button>
+                    </div>
+                </div>
+
+                <!-- VIP Room -->
+                <div class="room-card" data-room-id="vip">
+                    <div class="room-media-container">
+                        <img src="VIP room.jpg" class="room-image active" alt="VIP Room">
+                        <img src="VIP room bathroom.jpg" class="room-image-alt" alt="VIP Room Bathroom">
+                        <div class="toggle-media-btn" onclick="toggleRoomImage(this)">
+                            <i class="fa-solid fa-bath"></i> View Bathroom
+                        </div>
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>VIP Room</h3>
+                            <span class="room-price">$750<small>/night</small></span>
+                        </div>
+                        <p class="room-desc">Our flagship suite. Complete luxury with private workspace, custom bar setup, and a massive bath area.</p>
+                        <div class="room-amenities-icons">
+                            <span><i class="fa-solid fa-users"></i> 4 Guests</span>
+                            <span><i class="fa-solid fa-ruler-combined"></i> 100 m²</span>
+                            <span><i class="fa-solid fa-water"></i> Pool Access</span>
+                        </div>
+                        <button class="btn btn-secondary w-full" onclick="openBookingModal('vip')">Book Suite</button>
+                    </div>
+                </div>
+
+                <!-- Garden View Room -->
+                <div class="room-card">
+                    <div class="room-media-container">
+                        <img src="garden view room.jpg" class="room-image active" alt="Garden View Room">
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>Garden View Room</h3>
+                            <span class="room-price">$220<small>/night</small></span>
+                        </div>
+                        <p class="room-desc">Immerse yourself in lush botanical surroundings. Includes a private patio overlooking our manicured gardens.</p>
+                        <div class="room-amenities-icons">
+                            <span><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+                            <span><i class="fa-solid fa-leaf"></i> Garden view</span>
+                            <span><i class="fa-solid fa-coffee"></i> Patio</span>
+                        </div>
+                        <button class="btn btn-secondary w-full" onclick="openBookingModal('garden')">Book Suite</button>
+                    </div>
+                </div>
+
+                <!-- Sea Shore View Room -->
+                <div class="room-card">
+                    <div class="room-media-container">
+                        <img src="sea shore view room.webp" class="room-image active" alt="Sea Shore View Room">
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>Sea Shore View Room</h3>
+                            <span class="room-price">$350<small>/night</small></span>
+                        </div>
+                        <p class="room-desc">Wake up to the sound of breaking waves. Features a glass balcony offering endless sea vistas and sea breezes.</p>
+                        <div class="room-amenities-icons">
+                            <span><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+                            <span><i class="fa-solid fa-water"></i> Sea shore view</span>
+                            <span><i class="fa-solid fa-wind"></i> Balcony</span>
+                        </div>
+                        <button class="btn btn-secondary w-full" onclick="openBookingModal('sea')">Book Suite</button>
+                    </div>
+                </div>
+
+                <!-- Nature View Room -->
+                <div class="room-card">
+                    <div class="room-media-container">
+                        <img src="nature view room.webp" class="room-image active" alt="Nature View Room">
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>Nature View Room</h3>
+                            <span class="room-price">$280<small>/night</small></span>
+                        </div>
+                        <p class="room-desc">A panoramic escape into the deep green woods. Featuring floor-to-ceiling windows for perfect forest stargazing.</p>
+                        <div class="room-amenities-icons">
+                            <span><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+                            <span><i class="fa-solid fa-tree"></i> Forest view</span>
+                            <span><i class="fa-solid fa-binoculars"></i> Skylights</span>
+                        </div>
+                        <button class="btn btn-secondary w-full" onclick="openBookingModal('nature')">Book Suite</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="amenities-section" id="amenities">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Resort Facilities</span>
+                <h2 class="section-title">Elevate Your Lifestyle</h2>
+                <p class="section-desc">At J.K.L Resort, health, leisure, and relaxation are woven into the core of your guest experience.</p>
+            </div>
+
+            <div class="grid grid-2 amenity-grid">
+                <!-- Infinity Pool -->
+                <div class="amenity-card">
+                    <img src="swimming pool.png" alt="Swimming Pool">
+                    <div class="amenity-content">
+                        <h3>Infinity Swimming Pool</h3>
+                        <p>Enjoy our panoramic swimming pool. Sip tropical cocktails and watch the horizon merge seamlessly with the crystal clear waters.</p>
+                    </div>
+                </div>
+                <!-- Gym -->
+                <div class="amenity-card">
+                    <img src="gym.png" alt="Resort Gym">
+                    <div class="amenity-content">
+                        <h3>Fitness Center</h3>
+                        <p>Stay active with state-of-the-art cardiovascular and strength machines, designed to keep your wellness routine on track.</p>
+                    </div>
+                </div>
+                <!-- Play Area -->
+                <div class="amenity-card">
+                    <img src="play area.png" alt="Play Area">
+                    <div class="amenity-content">
+                        <h3>Adventure Play Area</h3>
+                        <p>A fun and completely secure space for young explorers, loaded with climbing paths, sliding modules, and educational toys.</p>
+                    </div>
+                </div>
+                <!-- SPA -->
+                <div class="amenity-card">
+                    <img src="spa.png" alt="Wellness Spa">
+                    <div class="amenity-content">
+                        <h3>Samsara Wellness Spa</h3>
+                        <p>Surrender to total relaxation with volcanic hot stone treatments, customized massage therapy, and replenishing beauty treatments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dining Section -->
+    <section class="dining-section" id="dining">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Gastronomy</span>
+                <h2 class="section-title">Culinary Masterpieces</h2>
+                <p class="section-desc">Enjoy rich flavor palettes with our global menu selections. Every menu is complimentary for our resort boarders.</p>
+            </div>
+
+            <!-- Time Tabs -->
+            <div class="dining-tabs" id="diningTimeTabs">
+                <button class="tab-btn active" data-time="morning">
+                    <i class="fa-solid fa-mug-saucer"></i> Morning Menu
+                </button>
+                <button class="tab-btn" data-time="lunch">
+                    <i class="fa-solid fa-utensils"></i> Lunch Menu
+                </button>
+                <button class="tab-btn" data-time="dinner">
+                    <i class="fa-solid fa-wine-glass"></i> Dinner Menu
+                </button>
+            </div>
+
+            <!-- Cuisine Filters -->
+            <div class="cuisine-filters" id="cuisineFilters">
+                <button class="filter-btn active" data-cuisine="all">All Cuisines</button>
+                <button class="filter-btn" data-cuisine="indian">Indian</button>
+                <button class="filter-btn" data-cuisine="chinese">Chinese</button>
+                <button class="filter-btn" data-cuisine="mexican">Mexican</button>
+                <button class="filter-btn" data-cuisine="french">French</button>
+            </div>
+
+            <!-- Food Cards Grid -->
+            <div class="grid grid-3 dining-grid" id="diningGrid">
+                <!-- Dynamically Rendered by app.js -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container grid grid-4">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo"><span class="logo-accent">J.K.L</span> RESORT</a>
+                <p class="footer-about">An architectural masterpiece nestled between turquoise seas and wild canopies. Experience the ultimate in bespoke service and gourmet dining.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#rooms">Suites & Rooms</a></li>
+                    <li><a href="#amenities">Amenities</a></li>
+                    <li><a href="#dining">Gastronomy</a></li>
+                    <li><a href="mailto:yageswaran578@gmail.com">Contact Resort</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Dining Cuisines</h4>
+                <ul class="footer-links">
+                    <li><a href="#dining">Indian Classics</a></li>
+                    <li><a href="#dining">Chinese Dim Sum</a></li>
+                    <li><a href="#dining">Mexican Grills</a></li>
+                    <li><a href="#dining">French Bistro</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p class="footer-about">Subscribe to receive exclusive retreat details and private discount packages.</p>
+                <form class="footer-newsletter" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container flex-between">
+                <p>&copy; 2026 J.K.L Resort. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-tripadvisor"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Wizard Modal -->
+    <div class="modal-backdrop" id="bookingModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeBookingModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h2>Reserve Your Suite</h2>
+                <p>Fill out the form below to secure your luxury accommodation at J.K.L Resort.</p>
+            </div>
+            
+            <!-- Booking Steps -->
+            <div class="booking-wizard-steps">
+                <div class="wizard-step active" data-step="1">1. Room Details</div>
+                <div class="wizard-step" data-step="2">2. Guest Details</div>
+                <div class="wizard-step" data-step="3">3. Review & Book</div>
+            </div>
+
+            <!-- Booking Wizard Form -->
+            <form id="bookingWizardForm">
+                <!-- Step 1: Room Details -->
+                <div class="wizard-pane active" id="pane1">
+                    <div class="grid grid-2 gap-2">
+                        <div class="form-group">
+                            <label for="bookRoomType">Select Suite</label>
+                            <select id="bookRoomType" required>
+                                <option value="single" data-price="150">Single Room - $150/night</option>
+                                <option value="double" data-price="250">Double Room - $250/night</option>
+                                <option value="deluxe" data-price="400">Deluxe Room - $400/night</option>
+                                <option value="vip" data-price="750">VIP Room - $750/night</option>
+                                <option value="garden" data-price="220">Garden View Room - $220/night</option>
+                                <option value="sea" data-price="350">Sea Shore View Room - $350/night</option>
+                                <option value="nature" data-price="280">Nature View Room - $280/night</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookGuests">Total Guests</label>
+                            <input type="number" id="bookGuests" min="1" max="6" value="1" required>
+                        </div>
+                    </div>
+                    <div class="grid grid-2 gap-2 mt-1">
+                        <div class="form-group">
+                            <label for="bookCheckIn"><i class="fa-regular fa-calendar-days text-gold"></i> Check-In Date</label>
+                            <input type="date" id="bookCheckIn" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookCheckInTime"><i class="fa-regular fa-clock text-gold"></i> Check-In Time</label>
+                            <select id="bookCheckInTime" required>
+                                <option value="12:00">12:00 PM (Noon)</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00" selected>3:00 PM (Standard)</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="18:00">6:00 PM (Late)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid grid-2 gap-2 mt-1">
+                        <div class="form-group">
+                            <label for="bookCheckOut"><i class="fa-regular fa-calendar-check text-gold"></i> Check-Out Date</label>
+                            <input type="date" id="bookCheckOut" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookCheckOutTime"><i class="fa-regular fa-clock text-gold"></i> Check-Out Time</label>
+                            <select id="bookCheckOutTime">
+                                <option value="10:00" selected>10:00 AM (Standard)</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM (Late)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer-btns">
+                        <button type="button" class="btn btn-primary ml-auto" onclick="goToWizardStep(2)">Next Step <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Guest Details -->
+                <div class="wizard-pane" id="pane2">
+                    <div class="form-group">
+                        <label for="guestName">Guest Full Name</label>
+                        <input type="text" id="guestName" placeholder="Full Name" required>
+                    </div>
+                    <div class="grid grid-2 gap-2 mt-1">
+                        <div class="form-group">
+                            <label for="guestEmail">Email Address</label>
+                            <input type="email" id="guestEmail" placeholder="email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guestPhone">Phone Number</label>
+                            <input type="tel" id="guestPhone" placeholder="+1 (555) 019-2834" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Complementary Amenities Section -->
+                    <div class="extra-amenities mt-2">
+                        <h4>Select Complementary Add-ons</h4>
+                        <div class="grid grid-2 gap-1 mt-1">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="addSpa">
+                                <span class="checkbox-custom"></span>
+                                Spa Treatment Booking
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="addShuttle">
+                                <span class="checkbox-custom"></span>
+                                VIP Airport Shuttle
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer-btns">
+                        <button type="button" class="btn btn-secondary" onclick="goToWizardStep(1)"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                        <button type="button" class="btn btn-primary" onclick="goToWizardStep(3)">Review & Book <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Review and Checkout -->
+                <div class="wizard-pane" id="pane3">
+                    <div class="billing-summary">
+                        <h3>Booking Review</h3>
+                        <div class="summary-details mt-1">
+                            <div class="flex-between">
+                                <span>Room Selected:</span>
+                                <span id="summaryRoom" class="text-bold">Double Room</span>
+                            </div>
+                            <div class="flex-between mt-1">
+                                <span>Check-In:</span>
+                                <span id="summaryCheckIn">July 10 &mdash; 3:00 PM</span>
+                            </div>
+                            <div class="flex-between mt-1">
+                                <span>Check-Out:</span>
+                                <span id="summaryCheckOut">July 15 &mdash; 10:00 AM</span>
+                            </div>
+                            <div class="flex-between mt-1">
+                                <span>Duration:</span>
+                                <span id="summaryDates">5 Nights</span>
+                            </div>
+                            <div class="flex-between mt-1">
+                                <span>Guest:</span>
+                                <span id="summaryGuest">John Doe</span>
+                            </div>
+                            <hr class="summary-divider mt-2">
+                            <div class="flex-between mt-1">
+                                <span>Rate / Night:</span>
+                                <span id="summaryRate">$250.00</span>
+                            </div>
+                            <div class="flex-between mt-1">
+                                <span>Subtotal:</span>
+                                <span id="summarySubtotal">$1,250.00</span>
+                            </div>
+                            <div class="flex-between mt-1">
+                                <span>Resort Tax & Service (12%):</span>
+                                <span id="summaryTax">$150.00</span>
+                            </div>
+                            <div class="flex-between total-row mt-2">
+                                <span>Estimated Total:</span>
+                                <span id="summaryTotal">$1,400.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer-btns">
+                        <button type="button" class="btn btn-secondary" onclick="goToWizardStep(2)"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                        <button type="button" class="btn btn-primary btn-book-final" onclick="submitBookingOrder(event)">
+                            <span class="btn-text">Confirm Reservation</span>
+                            <span class="spinner-loader hidden"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Success screen -->
+            <div class="wizard-pane text-center" id="paneSuccess">
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h2>Reservation Confirmed!</h2>
+                <p>Thank you for choosing J.K.L Resort. Your booking voucher has been compiled and a copy sent to your email. We look forward to welcoming you.</p>
+                
+                <!-- Mock Voucher -->
+                <div class="voucher-wrapper mt-2" id="voucherCard">
+                    <div class="voucher-header">
+                        <h4>J.K.L RESORT</h4>
+                        <span>BOARDING PASS</span>
+                    </div>
+                    <div class="voucher-body">
+                        <div class="grid grid-2">
+                            <div>
+                                <small>GUEST</small>
+                                <div id="voucherGuest">John Doe</div>
+                            </div>
+                            <div>
+                                <small>CONFIRMATION ID</small>
+                                <div id="voucherCode" class="text-gold">JKL-9821-X</div>
+                            </div>
+                        </div>
+                        <div class="grid grid-2 mt-1">
+                            <div>
+                                <small>ROOM TYPE</small>
+                                <div id="voucherRoom">Double Room</div>
+                            </div>
+                            <div>
+                                <small>CHECK-IN DATE &amp; TIME</small>
+                                <div id="voucherCheckIn">Jul 10 &mdash; 3:00 PM</div>
+                            </div>
+                        </div>
+                        <div class="grid grid-2 mt-1">
+                            <div>
+                                <small>CHECK-OUT DATE &amp; TIME</small>
+                                <div id="voucherCheckOut">Jul 15 &mdash; 10:00 AM</div>
+                            </div>
+                            <div>
+                                <small>DURATION</small>
+                                <div id="voucherDates">5 Nights</div>
+                            </div>
+                        </div>
+                        <div class="grid grid-2 mt-1">
+                            <div>
+                                <small>COMPLEMENTARY ACCESS</small>
+                                <div>Pool, Gym, Spa, Play Area</div>
+                            </div>
+                            <div>
+                                <small>MEALS INCLUDED</small>
+                                <div>Breakfast, Lunch, Dinner</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer-btns justify-center mt-2">
+                    <button class="btn btn-secondary" onclick="downloadVoucher()"><i class="fa-solid fa-download"></i> Save Pass</button>
+                    <button class="btn btn-primary" onclick="closeBookingModal()">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
